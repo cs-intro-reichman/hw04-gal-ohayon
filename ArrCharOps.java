@@ -147,12 +147,6 @@ public class ArrCharOps {
      *    in the longer string, the shorter string is considered lexicographically smaller.
      * 3. If both strings have the same characters and the same length, they are considered equal.
      * 
-     * Examples:
-     * - "apple" is less than "banana" because 'a' comes before 'b'.
-     * - "abc" is less than "abcd" because it is shorter.
-     * - "hello" is equal to "hello".
-     * - "date" is greater than "dark" because 't' comes after 'k'.
-     * 
      * @param str1 the first string to compare
      * @param str2 the second string to compare
      * @return -1 if str1 is lexicographically less than str2,
@@ -161,7 +155,7 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        if (str1 == null || str2 == null) {
+        if (str1 == null || str2 == null || str1.length() == 0 || str2.length() == 0) {
             return -2;
         }
 
